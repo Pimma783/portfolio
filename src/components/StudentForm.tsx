@@ -1,6 +1,7 @@
+'use client'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { studentSchema } from '../ีutils/validationSchema'
+import { studentSchema } from '../utils/validationSchema'
 import { z } from 'zod'
 import { useStudentStore } from '../store/studentStore'
 import { useState } from 'react'
@@ -38,7 +39,14 @@ export default function StudentForm() {
             <input {...register("phone")} placeholder="เบอร์โทรศัพท์" />
             <input {...register("email")} placeholder="อีเมล" />
             <input {...register("school")} placeholder="โรงเรียน" />
-            <input type="number" step="0.01" {...register("gpa")} placeholder="GPA" />
+            <input
+                type="number"
+                step="0.01"
+                {...register("gpa", { valueAsNumber: true })}
+                placeholder="GPA"
+            />
+
+
             <input {...register("talent")} placeholder="ความสามารถพิเศษ" />
             <textarea {...register("reason")} placeholder="เหตุผลในการสมัคร" />
             <input {...register("major")} placeholder="สาขาที่เลือก" />

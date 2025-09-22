@@ -1,4 +1,4 @@
-import StudentTable from '../../components/StudentTable'
+import StudentTable from "@/components/StudentTable"
 
 export default function TeacherPage() {
   return (
@@ -8,3 +8,4 @@ export default function TeacherPage() {
     </main>
   )
 }
+

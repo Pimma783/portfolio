@@ -1,3 +1,4 @@
+'use client'
 import { useStudentStore } from '../store/studentStore'
 import Link from 'next/link'
 import { useState } from 'react'

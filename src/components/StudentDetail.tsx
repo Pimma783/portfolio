@@ -1,3 +1,4 @@
+'use client'
 import { useStudentStore } from '../store/studentStore'
 
 export default function StudentDetail({ id }: { id: string }) {
